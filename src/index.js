@@ -13,14 +13,9 @@ function generatePoem(event) {
     
     let poemElement = document.querySelector("#poem")
     poemElement.classList.remove ("hidden")
-    poemElement.innerHTML = `Hiding roses... Removing violets... Fetching ${instructionsInput.value}`
+    poemElement.innerHTML = `Fetching ${instructionsInput.value}... Hiding roses... Removing violets... `
    
     axios.get(apiUrl).then(displayPoem)
-
-    console.log ("Generating poem")
-    console.log (`Prompt: ${prompt}`)
-    console.log (`Context: ${context}`)
-    console.log (`user instructions: ${instructionsInput}`)
     
 }
 
